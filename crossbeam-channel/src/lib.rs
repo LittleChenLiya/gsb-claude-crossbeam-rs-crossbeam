@@ -357,6 +357,8 @@ mod err;
 #[cfg(feature = "std")]
 mod flavors;
 #[cfg(feature = "std")]
+mod round_robin;
+#[cfg(feature = "std")]
 mod select;
 #[cfg(feature = "std")]
 mod select_macro;
@@ -383,5 +385,6 @@ pub use crate::{
         ReadyTimeoutError, RecvError, RecvTimeoutError, SelectTimeoutError, SendError,
         SendTimeoutError, TryReadyError, TryRecvError, TrySelectError, TrySendError,
     },
+    round_robin::RoundRobinReceiver,
     select::{Select, SelectedOperation},
 };
