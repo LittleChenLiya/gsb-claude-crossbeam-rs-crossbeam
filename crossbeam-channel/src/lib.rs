@@ -357,6 +357,8 @@ mod err;
 #[cfg(feature = "std")]
 mod flavors;
 #[cfg(feature = "std")]
+mod round_robin;
+#[cfg(feature = "std")]
 mod select;
 #[cfg(feature = "std")]
 mod select_macro;
@@ -385,3 +387,6 @@ pub use crate::{
     },
     select::{Select, SelectedOperation},
 };
+
+#[cfg(feature = "std")]
+pub use crate::round_robin::{RoundRobin, RoundRobinError, ShutdownHandle};
