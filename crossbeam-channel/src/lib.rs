@@ -347,6 +347,8 @@ extern crate std;
 mod alloc_helper;
 
 #[cfg(feature = "std")]
+pub mod batch;
+#[cfg(feature = "std")]
 mod channel;
 #[cfg(feature = "std")]
 mod context;
