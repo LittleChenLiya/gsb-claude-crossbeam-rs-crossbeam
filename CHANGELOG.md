@@ -1,3 +1,13 @@
+# Version 0.8.6 (unreleased)
+
+- Add `crossbeam::sync::CancellationToken`, a one-shot cancellation signal that
+  wakes all waiting threads at once. Dropping the last `CancellationTokenSource`
+  cancels the token automatically. Callbacks registered with
+  `CancellationToken::on_cancel` run at most once, outside of the lock;
+  registration is revocable before the callback starts and immediate after
+  cancellation, and a panicking callback does not prevent other callbacks from
+  running.
+
 # Version 0.8.5
 
 - Update MSRV policy to support 1 year instead of 6 months to meet rayon's MSRV policy. (#1284)

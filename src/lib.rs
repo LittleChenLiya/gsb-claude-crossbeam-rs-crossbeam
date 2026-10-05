@@ -18,6 +18,7 @@
 //! ## Thread synchronization
 //!
 //! * [`channel`], multi-producer multi-consumer channels for message passing.
+//! * [`CancellationToken`], a one-shot signal that wakes all waiting threads.
 //! * [`Parker`], a thread parking primitive.
 //! * [`ShardedLock`], a sharded reader-writer lock with fast concurrent reads.
 //! * [`WaitGroup`], for synchronizing the beginning or end of some computation.
@@ -32,6 +33,7 @@
 //! [`AtomicConsume`]: atomic::AtomicConsume
 //! [`ArrayQueue`]: queue::ArrayQueue
 //! [`SegQueue`]: queue::SegQueue
+//! [`CancellationToken`]: sync::CancellationToken
 //! [`Parker`]: sync::Parker
 //! [`ShardedLock`]: sync::ShardedLock
 //! [`WaitGroup`]: sync::WaitGroup
