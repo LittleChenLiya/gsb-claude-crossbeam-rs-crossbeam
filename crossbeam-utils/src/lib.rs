@@ -10,6 +10,7 @@
 //! * [`Parker`], a thread parking primitive.
 //! * [`ShardedLock`], a sharded reader-writer lock with fast concurrent reads.
 //! * [`WaitGroup`], for synchronizing the beginning or end of some computation.
+//! * [`CancelToken`], a cancellation token that wakes all waiters at once.
 //!
 //! ## Utilities
 //!
@@ -19,6 +20,7 @@
 //!
 //! [`AtomicCell`]: atomic::AtomicCell
 //! [`AtomicConsume`]: atomic::AtomicConsume
+//! [`CancelToken`]: sync::CancelToken
 //! [`Parker`]: sync::Parker
 //! [`ShardedLock`]: sync::ShardedLock
 //! [`WaitGroup`]: sync::WaitGroup
