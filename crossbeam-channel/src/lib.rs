@@ -347,6 +347,8 @@ extern crate std;
 mod alloc_helper;
 
 #[cfg(feature = "std")]
+mod batch;
+#[cfg(feature = "std")]
 mod channel;
 #[cfg(feature = "std")]
 mod context;
@@ -376,6 +378,10 @@ pub mod internal {
 
 #[cfg(feature = "std")]
 pub use crate::{
+    batch::{
+        BatchReceiver, BatchSender, RecvBatchError, RecvBatchTimeoutError, TryRecvBatchError,
+        TrySendBatchError, SendBatchError, SendBatchTimeoutError, batch_channel,
+    },
     channel::{
         IntoIter, Iter, Receiver, Sender, TryIter, after, at, bounded, never, tick, unbounded,
     },
